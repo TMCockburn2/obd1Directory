@@ -11,11 +11,13 @@ import UIKit
 import Firebase
 
 
+
 class ViewController: UIViewController {
     //make and model pulled from previous class
     var makeSelected = String()
     var modelSelected = String()
     //ad object
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var bannerView: GADBannerView!
     //connected buttons to change text specifics programmatically
     @IBOutlet weak var instructionButton: UIButton!
@@ -38,6 +40,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.black
+        titleLabel.text = makeSelected + " " + modelSelected
         instructionButton.titleLabel?.numberOfLines = 3
         codeButton.titleLabel?.numberOfLines = 3
         bannerView.adUnitID = "ca-app-pub-4945302572759470/7715066310"
@@ -64,6 +67,19 @@ class ViewController: UIViewController {
             instr.make = makeSelected
             instr.model = modelSelected
         }
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if CheckInternet.Connection() == false{
+            self.Alert(message: "Your device is not connected to the internet. Please connect in order to continue.")
+        }
+    }
+    
+    func Alert (message:String){
+        let alert = UIAlertController(title: "Alert", message: message, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "ok", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated:true, completion: nil)
         
     }
 

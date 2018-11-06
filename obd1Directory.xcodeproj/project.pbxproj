@@ -22,6 +22,7 @@
 		F23CA38A2188E4D000B78874 /* MakeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23CA3892188E4D000B78874 /* MakeCollectionViewCell.swift */; };
 		F23CA38C2188F23700B78874 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F23CA38B2188F23700B78874 /* GoogleService-Info.plist */; };
 		F23CA38E2189180300B78874 /* ModelSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23CA38D2189180300B78874 /* ModelSelectViewController.swift */; };
+		F2CCEEB72192335000ADEA54 /* CheckInternet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CCEEB62192335000ADEA54 /* CheckInternet.swift */; };
 		FDD9E52540A673639FB6B693 /* Pods_obd1DirectoryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 514EBEB2BE0E0EC44B6CF7CF /* Pods_obd1DirectoryTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,7 @@
 		F23CA3892188E4D000B78874 /* MakeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeCollectionViewCell.swift; sourceTree = "<group>"; };
 		F23CA38B2188F23700B78874 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F23CA38D2189180300B78874 /* ModelSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelSelectViewController.swift; sourceTree = "<group>"; };
+		F2CCEEB62192335000ADEA54 /* CheckInternet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInternet.swift; sourceTree = "<group>"; };
 		F97B1F4143352EC1283FD084 /* Pods-obd1DirectoryUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-obd1DirectoryUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-obd1DirectoryUITests/Pods-obd1DirectoryUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -161,6 +163,7 @@
 				F23CA3892188E4D000B78874 /* MakeCollectionViewCell.swift */,
 				F23CA38D2189180300B78874 /* ModelSelectViewController.swift */,
 				F238ABA8218B9FA600646CCA /* CodeViewController.swift */,
+				F2CCEEB62192335000ADEA54 /* CheckInternet.swift */,
 			);
 			path = obd1Directory;
 			sourceTree = "<group>";
@@ -419,6 +422,7 @@
 				F238ABAB218DDE9800646CCA /* InstructionViewController.swift in Sources */,
 				F23CA3582187AC1B00B78874 /* AppDelegate.swift in Sources */,
 				F238ABA9218B9FA600646CCA /* CodeViewController.swift in Sources */,
+				F2CCEEB72192335000ADEA54 /* CheckInternet.swift in Sources */,
 				F23CA38E2189180300B78874 /* ModelSelectViewController.swift in Sources */,
 				F23CA3882187B3C600B78874 /* CarSelectController.swift in Sources */,
 			);
@@ -595,6 +599,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U4VFW8QD6T;
 				INFOPLIST_FILE = obd1Directory/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -613,6 +618,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U4VFW8QD6T;
 				INFOPLIST_FILE = obd1Directory/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

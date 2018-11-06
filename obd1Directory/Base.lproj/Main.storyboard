@@ -14,7 +14,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController modalTransitionStyle="crossDissolve" id="BYZ-38-t0r" customClass="ViewController" customModule="obd1Directory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="obd1Directory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -128,6 +128,7 @@
                         <outlet property="bannerView" destination="Unx-aH-XIm" id="uLq-s2-OBs"/>
                         <outlet property="codeButton" destination="vJV-km-NAM" id="vpB-WP-f4U"/>
                         <outlet property="instructionButton" destination="wFV-hk-xyO" id="1Qa-e5-V0r"/>
+                        <outlet property="titleLabel" destination="dkS-7t-9cK" id="ux2-Ij-iyV"/>
                         <segue destination="ntz-rT-mb4" kind="presentation" identifier="backtoBrand" id="eVI-Wu-0hF"/>
                         <segue destination="9FL-jp-ejl" kind="presentation" identifier="toCodes" id="iNh-L5-mWX"/>
                         <segue destination="N2J-3B-Zcf" kind="presentation" identifier="toInstructions" id="1Cm-EF-x4w"/>
@@ -140,7 +141,7 @@
         <!--Car Select Controller-->
         <scene sceneID="C9V-I4-sHM">
             <objects>
-                <viewController modalTransitionStyle="crossDissolve" id="ntz-rT-mb4" customClass="CarSelectController" customModule="obd1Directory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ntz-rT-mb4" customClass="CarSelectController" customModule="obd1Directory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XgW-yg-GJ7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -226,7 +227,7 @@
         <!--Model Select View Controller-->
         <scene sceneID="K8N-ht-S1v">
             <objects>
-                <viewController modalTransitionStyle="crossDissolve" id="g4b-mj-z4n" customClass="ModelSelectViewController" customModule="obd1Directory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="g4b-mj-z4n" customClass="ModelSelectViewController" customModule="obd1Directory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bsU-oe-wcd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -277,7 +278,7 @@
         <!--Code View Controller-->
         <scene sceneID="8bA-2F-du2">
             <objects>
-                <viewController modalTransitionStyle="crossDissolve" id="9FL-jp-ejl" customClass="CodeViewController" customModule="obd1Directory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9FL-jp-ejl" customClass="CodeViewController" customModule="obd1Directory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rTt-x2-rjf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -329,7 +330,7 @@
         <!--Instruction View Controller-->
         <scene sceneID="c16-ax-ycl">
             <objects>
-                <viewController modalTransitionStyle="crossDissolve" id="N2J-3B-Zcf" customClass="InstructionViewController" customModule="obd1Directory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="N2J-3B-Zcf" customClass="InstructionViewController" customModule="obd1Directory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ydX-Po-kdi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -338,19 +339,20 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJ4-hK-ZPD">
-                                <rect key="frame" x="16" y="57" width="343" height="75"/>
+                                <rect key="frame" x="16" y="57" width="343" height="25"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Here is the label that will display information step by step. Here is step 1">
+                                    <fragment content="Check your internet connection!">
                                         <attributes>
                                             <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <font key="NSFont" size="21" name="Optima-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNy-ol-QRP">
-                                <rect key="frame" x="16" y="215" width="34" height="37"/>
+                                <rect key="frame" x="16" y="165" width="34" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="JFp-Nm-qxe"/>
                                     <constraint firstAttribute="width" constant="34" id="YDl-uQ-BTe"/>
@@ -361,10 +363,10 @@
                                 </connections>
                             </button>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="blO-sd-8dX">
-                                <rect key="frame" x="106" y="304" width="162" height="2"/>
+                                <rect key="frame" x="106" y="254" width="162" height="2"/>
                             </progressView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k1m-1q-36Q">
-                                <rect key="frame" x="231" y="217" width="128" height="35"/>
+                                <rect key="frame" x="231" y="167" width="128" height="35"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Go to Code List">
@@ -380,7 +382,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wJn-Z1-cuv">
-                                <rect key="frame" x="322" y="213" width="34" height="37"/>
+                                <rect key="frame" x="322" y="163" width="34" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="en7-fK-L8w"/>
                                     <constraint firstAttribute="width" constant="34" id="uVj-Ap-qtF"/>
@@ -398,7 +400,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTT-hw-A7D">
-                                <rect key="frame" x="67" y="140" width="240" height="19"/>
+                                <rect key="frame" x="67" y="90" width="240" height="19"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Pictures coming soon!">
                                         <attributes>
@@ -459,7 +461,7 @@
         <image name="next" width="1600" height="1600"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="TFj-NO-EzI"/>
+        <segue reference="iNh-L5-mWX"/>
         <segue reference="eVI-Wu-0hF"/>
     </inferredMetricsTieBreakers>
 </document>

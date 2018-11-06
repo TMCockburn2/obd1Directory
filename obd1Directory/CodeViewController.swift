@@ -60,6 +60,7 @@ class CodeViewController: UIViewController, UITableViewDelegate, UITableViewData
         myTableView.backgroundColor = UIColor.clear
         myTableView.dataSource = self
         myTableView.delegate = self
+        myTableView.allowsSelection = false
         let scrollPoint = CGPoint(x:0, y:myTableView.contentSize.height - myTableView.frame.size.height)
         myTableView.setContentOffset(scrollPoint, animated: true)
         self.view.addSubview(myTableView)
@@ -95,5 +96,18 @@ class CodeViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if CheckInternet.Connection() == false{
+            self.Alert(message: "Your device is not connected to the internet. Please connect in order to continue.")
+        }
+    }
+    
+    func Alert (message:String){
+        let alert = UIAlertController(title: "Alert", message: message, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "ok", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated:true, completion: nil)
+        
     }
 }

@@ -43,6 +43,8 @@ class InstructionViewController: UIViewController {
         bannerAd.adUnitID = "ca-app-pub-4945302572759470/7715066310"
         bannerAd.rootViewController = self
         bannerAd.load(GADRequest())
+        toCode.isHidden = true
+        
         
         
         dbRef = Database.database().reference()
@@ -130,6 +132,19 @@ class InstructionViewController: UIViewController {
             let code = segue.destination as! CodeViewController
             code.make = make
             code.model = model
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if CheckInternet.Connection() == false{
+            self.Alert(message: "Your device is not connected to the internet. Please connect in order to continue.")
+        }
+    }
+    
+    func Alert (message:String){
+        let alert = UIAlertController(title: "Alert", message: message, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "ok", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated:true, completion: nil)
         
     }
 

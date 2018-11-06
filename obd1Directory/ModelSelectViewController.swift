@@ -104,5 +104,18 @@ class ModelSelectViewController: UIViewController {
         
         
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if CheckInternet.Connection() == false{
+            self.Alert(message: "Your device is not connected to the internet. Please connect in order to continue.")
+        }
+    }
+    
+    func Alert (message:String){
+        let alert = UIAlertController(title: "Alert", message: message, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "ok", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated:true, completion: nil)
+        
+    }
 
 }
